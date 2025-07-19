@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPECIAL FOR U sayangkuu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="halaman3">
+    <!-- Tombol buka album -->
+    <div class="album-preview" onclick="bukaGrid()">
+      <img src="image/cover.jpg" alt="Album Cover" />
+      <p>Klik untuk buka album</p>
+    </div>
+
+    <!-- Album Grid -->
+    <div id="popupGrid" class="popup-grid" onclick="tutupModal">
+      <span class="close-grid" onclick="tutupGrid()">&times;</span>
+      <div class="grid-container foto">
+        <!-- Gambar-gambar -->
+        <img src="image/1.jpg" alt="foto 1" onclick="tampilkanModal(this)" />
+        <img src="image/2.jpg" alt="foto 2" onclick="tampilkanModal(this)" />
+        <img src="image/3.jpg" alt="foto 3" onclick="tampilkanModal(this)" />
+        <img src="image/4.jpg" alt="foto 4" onclick="tampilkanModal(this)" />
+        <img src="image/5.jpg" alt="foto 5" onclick="tampilkanModal(this)" />
+        <img src="image/6.jpg" alt="foto 6" onclick="tampilkanModal(this)" />
+        <img src="image/7.jpg" alt="foto 7" onclick="tampilkanModal(this)" />
+        <img src="image/8.jpg" alt="foto 8" onclick="tampilkanModal(this)" />
+        <img src="image/9.jpg" alt="foto 9" onclick="tampilkanModal(this)" />
+        <img src="image/10.jpg" alt="foto 10" onclick="tampilkanModal(this)" />
+        <img src="image/11.jpg" alt="foto 11" onclick="tampilkanModal(this)" />
+        <img src="image/12.jpg" alt="foto 12" onclick="tampilkanModal(this)" />
+        <img src="image/13.jpg" alt="foto 13" onclick="tampilkanModal(this)" />
+        <img src="image/14.jpg" alt="foto 14" onclick="tampilkanModal(this)" />
+        <img src="image/15.jpg" alt="foto 15" onclick="tampilkanModal(this)" />
+        <img src="image/16.jpg" alt="foto 16" onclick="tampilkanModal(this)" />
+        <img src="image/17.jpg" alt="foto 17" onclick="tampilkanModal(this)" />
+        <img src="image/18.jpg" alt="foto 18" onclick="tampilkanModal(this)" />
+        <img src="image/19.jpg" alt="foto 19" onclick="tampilkanModal(this)" />
+        <img src="image/20.jpg" alt="foto 20" onclick="tampilkanModal(this)" />
+      </div>
+    </div>
+
+    <!-- Modal (pindah ke luar dari popupGrid) -->
+    <div id="myModal" class="modal" onclick="tutupModal(event)">
+      <span class="close" onclick="tutupModal(event)">&times;</span>
+      <img class="modal-content" id="gambarModal" />
+    </div>
+
+    <!-- Musik -->
+    <audio autoplay loop>
+      <source src="sempurna.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- JS -->
+    <script src="halaman3.js"></script>
+  </body>
+</html>
