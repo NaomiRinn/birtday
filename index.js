@@ -9,7 +9,7 @@ function updateAwal() {
     `<h1>${awal.slice(0,charIndex)} </h1>`;
     charIndex++;
     if (charIndex <= awal.length) {
-        setTimeout(updateAwal, 100); // kecepatan ketik
+        setTimeout(updateAwal, 50); // kecepatan ketik
     }
 }
 updateAwal();

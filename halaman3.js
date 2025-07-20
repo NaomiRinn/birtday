@@ -33,35 +33,3 @@ bodyEl.addEventListener("mousemove", (event) => {
         spanEl.remove();
     }, 3000);
 })
-
-function tampilkanModal(gambar) {
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("gambarModal");
-    modal.style.display = "block";
-    modalImg.src = gambar.src;
-    document.body.style.overflow = "hidden"; // Nonaktifkan scroll saat modal
-}
-
-function tutupModal(event) {
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("gambarModal");
-
-    // Tutup hanya jika yang diklik adalah background (bukan gambar)
-    if (event.target === modal || event.target.classList.contains("close")) {
-        modal.style.display = "none";
-        document.body.style.overflow = ""; // Aktifkan scroll lagi
-    }
-}
-
-function bukaGrid() {
-    const popup = document.getElementById("popupGrid");
-    popup.style.display = "block";
-    document.body.style.overflow = "hidden"; // Nonaktifkan scroll agar fokus ke grid
-}
-
-function tutupGrid() {
-    const popup = document.getElementById("popupGrid");
-    popup.style.display = "none";
-    document.body.style.overflow = ""; // Aktifkan scroll kalau sebelumnya dinonaktifkan
-}
-

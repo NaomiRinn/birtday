@@ -14,7 +14,7 @@ body {
     font-family: 'Archivo Black', sans-serif;
     font-weight: 400;
     font-style: normal;
-    overflow: auto;
+    overflow: hidden;
     color: rgb(98, 0, 0);
     flex-direction: column;
     align-items: center;
@@ -84,111 +84,6 @@ body.halaman3 {
     display: flex;
     justify-content: center;
 }
-
-.album-preview {
-    text-align: center;
-    margin-top: 40px;
-    cursor: pointer;
-}
-
-.album-preview img {
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ccc;
-    transition: transform 0.3s;
-}
-
-.album-preview img:hover {
-    transform: scale(1.05);
-}
-
-.popup-grid {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    background-color: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
-    padding: 2rem;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
-    justify-items: center;
-}
-
-.grid-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.grid-container img:hover {
-    transform: scale(1.05);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.modal-content {
-    display: block;
-    max-width: 90%;
-    max-height: 90vh;
-    margin: auto;
-    object-fit: contain;
-}
-
-.close,
-.close-grid {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    position: fixed;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-    z-index: 3000;
-}
-
-/* Responsif */
-@media (max-width: 992px) {
-    .foto {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .foto {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .foto {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-
 
 @keyframes animate {
     0% {

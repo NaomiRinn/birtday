@@ -8,7 +8,7 @@ function updateParagraph() {
         `<p>${para.slice(0, charIndex)} </p>`;
     charIndex++;
     if (charIndex <= para.length) {
-        setTimeout(updateParagraph, 100); // kecepatan ketik
+        setTimeout(updateParagraph, 50); // kecepatan ketik
     }
 }
 updateParagraph();
