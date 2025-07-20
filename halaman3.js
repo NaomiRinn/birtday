@@ -33,3 +33,34 @@ bodyEl.addEventListener("mousemove", (event) => {
         spanEl.remove();
     }, 3000);
 })
+
+document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", function (e) {
+        const link = el.getAttribute("onclick")?.includes("location.href")
+            ? el.getAttribute("onclick").match(/'(.+?)'/)?.[1]
+            : el.getAttribute("href");
+
+        if (link) {
+            e.preventDefault();
+            document.body.classList.add("wipe-out");
+            setTimeout(() => {
+                window.location.href = link;
+            }, 500);
+        }
+    });
+});
+
+window.onload = function () {
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+};
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        const popup = document.getElementById("popupUcapan");
+        popup.style.display = "flex";
+    }, 1000); // muncul setelah 1 detik
+});

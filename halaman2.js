@@ -24,7 +24,7 @@ noBtn.addEventListener('mouseover', () => {
     const y = Math.floor(Math.random() * window.innerHeight);
     noBtn.style.position = 'absolute';
     noBtn.style.left = x + 'px';
-    noBtn.style.top = y + 'px';w
+    noBtn.style.top = y + 'px'; w
 });
 
 bodyEl.addEventListener("mousemove", (event) => {
@@ -41,3 +41,19 @@ bodyEl.addEventListener("mousemove", (event) => {
         spanEl.remove();
     }, 3000);
 })
+
+document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("click", function (e) {
+        const link = el.getAttribute("onclick")?.includes("location.href")
+            ? el.getAttribute("onclick").match(/'(.+?)'/)?.[1]
+            : el.getAttribute("href");
+
+        if (link) {
+            e.preventDefault();
+            document.body.classList.add("wipe-out");
+            setTimeout(() => {
+                window.location.href = link;
+            }, 500);
+        }
+    });
+});
